@@ -26708,6 +26708,7 @@ int main()
 	cout << typeid(a).name() << endl;
 	save("소스.cpp");
 }
+
 파일 정보 : 소스.cpp, 크기:1651
 2022-04-18 11:21:25 GMT+9
  저장 시간 : 2022-04-18 11:21:25 GMT+9
@@ -27860,5 +27861,1917 @@ int main()
 		return a.size() == 5; });
 	
 	cout << "5 글자 단어 수 : " <<num<< endl;
+	save("소스.cpp");
+}
+
+파일 정보 : 소스.cpp, 크기:893
+2022-04-25 11:52:48 GMT+9
+ 저장 시간 : 2022-04-25 11:52:48 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+// 
+// forward_list -  
+// It is intended that forward_list have zero space or time overhead
+// relative to a hand-written C-style singly linked list.	
+// Features that would conflict with that goal have been omitted.
+//	어떤 컨테이너간에 충돌하는 것은  아예 존재하지 않는다. 
+//				반복자 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+int main()
+{
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1061
+2022-04-25 12:04:07 GMT+9
+ 저장 시간 : 2022-04-25 12:04:07 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+int main()
+{
+	char c = 'A';
+
+	char* p = &c; // 얘가지고 뭘 할수 있을까? 
+	//랜덤억세스가 가능한 . 메모리가 어디에 있더라도 순식간에 쫓아갈수 있다.
+	//일반화를 한다면
+	*p;
+	++p;
+	p == p;
+
+	p += 100;  // 포인터는 메모리를 찍는 놈
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1010
+2022-04-25 12:06:12 GMT+9
+ 저장 시간 : 2022-04-25 12:06:12 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+int main()
+{
+	// 모니터 화면을 가리키는 포인터를 추상화한 반복자 
+	ostream_iterator<char> p{ cout };			//p는 모니터 좌 상단에 위치
+
+	*p = 'A';
+	++p;
+	*p = 'B';
+	++p;
+	*p = 'C';
+
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1010
+2022-04-25 12:06:26 GMT+9
+ 저장 시간 : 2022-04-25 12:06:26 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+int main()
+{
+	// 모니터 화면을 가리키는 포인터를 추상화한 반복자 
+	ostream_iterator<char> p{ cout };			//p는 모니터 좌 상단에 위치
+
+	*p = 'A';
+	++p;
+	*p = 'B';
+	++p;
+	*p = 'C';
+
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:993
+2022-04-25 12:10:38 GMT+9
+ 저장 시간 : 2022-04-25 12:10:38 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+int main()
+{
+	// 모니터 화면을 가리키는 포인터를 추상화한 반복자 
+	ostream_iterator<char> p{ cout };			//p는 모니터 좌 상단에 위치
+
+	p = 'A';
+	p = 'B';
+	p = 'C';
+
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1043
+2022-04-25 12:12:15 GMT+9
+ 저장 시간 : 2022-04-25 12:12:15 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+int main()
+{
+	// 모니터 화면을 가리키는 포인터를 추상화한 반복자 
+	ostream_iterator<char> p{ cout };			//p는 모니터 좌 상단에 위치
+
+	*p = 'A';				//역방향 반복자 코딩한 후 이해될 거임
+	++p; 
+	p = 'B';
+	p = 'C';
+
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1187
+2022-04-25 12:19:15 GMT+9
+ 저장 시간 : 2022-04-25 12:19:15 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함
+// 나는 왜 여기 앉아 있을까 생각해 본다. 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+	cout << typeid(Iter).name() << endl;
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	
+	show(istream_iterator<char>{cin});
+	show(ostream_iterator<char>{cout});
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1195
+2022-04-25 12:20:12 GMT+9
+ 저장 시간 : 2022-04-25 12:20:12 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함
+// 나는 왜 여기 앉아 있을까 생각해 본다. 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+	cout << typeid(Iter).name() << endl;
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	show(1);
+	show(istream_iterator<char>{cin});
+	show(ostream_iterator<char>{cout});
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1279
+2022-04-25 12:22:22 GMT+9
+ 저장 시간 : 2022-04-25 12:22:22 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함
+// 나는 왜 여기 앉아 있을까 생각해 본다. 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+	cout << typeid(Iter).name() << endl;
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	//의문 -> 템플릿 함수에는 뭐가 전달될지 모른다. 알았으면 더 좋은 코딩을 하겠는데?
+	show(1);
+	show(istream_iterator<char>{cin});
+	show(ostream_iterator<char>{cout});
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1279
+2022-04-27 11:31:59 GMT+9
+ 저장 시간 : 2022-04-27 11:31:59 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.25  월 23                    월23수34                          (8주 1일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers	
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 동일한 방식으로 접근하기위해
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  6/6일(월요일) - 수업을 해야 함
+// 나는 왜 여기 앉아 있을까 생각해 본다. 
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+	cout << typeid(Iter).name() << endl;
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	//의문 -> 템플릿 함수에는 뭐가 전달될지 모른다. 알았으면 더 좋은 코딩을 하겠는데?
+	show(1);
+	show(istream_iterator<char>{cin});
+	show(ostream_iterator<char>{cout});
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1442
+2022-04-27 11:42:35 GMT+9
+ 저장 시간 : 2022-04-27 11:42:35 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+	cout << typeid(iterator_traits<Iter>::iterator_category).name() << endl;
+	
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	//의문 -> 템플릿 함수에는 뭐가 전달될지 모른다. 알았으면 더 좋은 코딩을 하겠는데?
+
+	int* p{};
+
+	show(p);
+	show(istream_iterator<char>{cin});
+	show(ostream_iterator<char>{cout});
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1709
+2022-04-27 11:47:28 GMT+9
+ 저장 시간 : 2022-04-27 11:47:28 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<forward_list>
+#include<list>
+#include<deque>
+#include<vector>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+	cout << typeid(iterator_traits<Iter>::iterator_category).name() << endl;
+	
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	//의문 -> 템플릿 함수에는 뭐가 전달될지 모른다. 알았으면 더 좋은 코딩을 하겠는데?
+
+	int* p{};
+
+	show(p);								// 모든 T*는 랜덤억세스 반복자로 등록되어 있다.
+	show(istream_iterator<char>{cin});
+	show(ostream_iterator<char>{cout});
+	show(forward_list<char>::iterator());
+	show(list<char>{}.begin());
+	show(deque<char>::iterator());
+	show(vector<char>::iterator());
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1749
+2022-04-27 11:50:29 GMT+9
+ 저장 시간 : 2022-04-27 11:50:29 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<forward_list>
+#include<list>
+#include<deque>
+#include<vector>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+	cout << typeid(iterator_traits<Iter>::iterator_category).name() << endl;
+	
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	//의문 -> 템플릿 함수에는 뭐가 전달될지 모른다. 알았으면 더 좋은 코딩을 하겠는데?
+	//show(1);	//반복자로 등록된 놈이아님
+	int* p{};
+
+	show(p);								// 모든 T*는 랜덤억세스 반복자로 등록되어 있다.
+	show(istream_iterator<char>{cin});
+	show(ostream_iterator<char>{cout});
+	show(forward_list<char>::iterator());
+	show(list<char>{}.begin());
+	show(deque<char>::iterator());
+	show(vector<char>::iterator());
+
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1479
+2022-04-27 11:51:15 GMT+9
+ 저장 시간 : 2022-04-27 11:51:15 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<forward_list>
+#include<list>
+#include<deque>
+#include<vector>
+#include<array>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+	cout << typeid(iterator_traits<Iter>::iterator_category).name() << endl;
+	
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	
+	//의문 -> 템플릿 함수에는 뭐가 전달될지 모른다. 알았으면 더 좋은 코딩을 하겠는데?
+	
+	array<int, 3> a;
+	show(a.begin());
+	
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1463
+2022-04-27 11:54:53 GMT+9
+ 저장 시간 : 2022-04-27 11:54:53 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<forward_list>
+#include<list>
+#include<deque>
+#include<vector>
+#include<array>
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	//반복자 종류를 출력해 본다. show(): 반복자 종류를 출력한다. 
+	
+	//의문 -> 템플릿 함수에는 뭐가 전달될지 모른다. 알았으면 더 좋은 코딩을 하겠는데?
+	
+	array<int, 3> a;
+	show(a.begin());
+	
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1279
+2022-04-27 12:04:33 GMT+9
+ 저장 시간 : 2022-04-27 12:04:33 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+
+	for (char c : str)
+		cout << c << " ";
+	cout << endl;
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1308
+2022-04-27 12:05:03 GMT+9
+ 저장 시간 : 2022-04-27 12:05:03 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hellozzzzzzzxxxxxxxxxxxxxssssssscc" };
+
+	for (char c : str)
+		cout << c << " ";
+	cout << endl;
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1312
+2022-04-27 12:05:58 GMT+9
+ 저장 시간 : 2022-04-27 12:05:58 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	
+	for (auto i = str.begin(); i != str.end(); ++i)
+		cout << *i << " ";
+	cout << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1383
+2022-04-27 12:07:19 GMT+9
+ 저장 시간 : 2022-04-27 12:07:19 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	string str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	for (auto i = str.rbegin(); i != str.rend(); ++i)
+		cout << *i << " ";
+	cout << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1423
+2022-04-27 12:15:04 GMT+9
+ 저장 시간 : 2022-04-27 12:15:04 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	//for (auto i = str.rbegin(); i != str.rend(); ++i)
+	//	cout << *i << " ";
+	//cout << endl;
+
+	cout << str.rbegin() << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1427
+2022-04-27 12:15:22 GMT+9
+ 저장 시간 : 2022-04-27 12:15:22 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	//for (auto i = str.rbegin(); i != str.rend(); ++i)
+	//	cout << *i << " ";
+	//cout << endl;
+
+	cout << str.rbegin() - 1 << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1420
+2022-04-27 12:15:42 GMT+9
+ 저장 시간 : 2022-04-27 12:15:42 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	//for (auto i = str.rbegin(); i != str.rend(); ++i)
+	//	cout << *i << " ";
+	//cout << endl;
+
+	cout << str.end() << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1387
+2022-04-27 12:32:42 GMT+9
+ 저장 시간 : 2022-04-27 12:32:42 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	for (auto i = str.rbegin() - 1; i != str.rend(); --i)
+		cout << *i << " ";
+	cout << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1391
+2022-04-27 12:33:17 GMT+9
+ 저장 시간 : 2022-04-27 12:33:17 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	for (auto i = str.rbegin() - 1; i != str.rend() - 1; --i)
+		cout << *i << " ";
+	cout << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1448
+2022-04-27 12:49:33 GMT+9
+ 저장 시간 : 2022-04-27 12:49:33 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	//sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+
+	for (auto i = str.rbegin() ; i != str.rend() ; ++i)
+		cout << *i << " ";
+	cout << endl;
+	
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1448
+2022-04-27 12:51:14 GMT+9
+ 저장 시간 : 2022-04-27 12:51:14 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	//sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+
+	for (auto i = str.rbegin() ; i != str.rend() ; ++i)
+		cout << *i << " ";
+	cout << endl;
+	
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1448
+2022-04-27 12:56:17 GMT+9
+ 저장 시간 : 2022-04-27 12:56:17 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	//sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+
+	for (auto i = str.rbegin() ; i != str.rend() ; ++i)
+		cout << *i << " ";
+	cout << endl;
+	
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1448
+2022-04-27 12:57:30 GMT+9
+ 저장 시간 : 2022-04-27 12:57:30 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	//sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+
+	for (auto i = str.rbegin() ; i != str.rend() ; ++i)
+		cout << *i << " ";
+	cout << endl;
+	
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1463
+2022-04-27 13:00:32 GMT+9
+ 저장 시간 : 2022-04-27 13:00:32 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello123456789876543" };
+	//역방향 반복자를 만들어 다음 코드가 실행되게 하라.
+	//sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+
+	for (auto i = str.rbegin() ; i != str.rend() ; ++i)
+		cout << *i << " ";
+	cout << endl;
+	
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1433
+2022-04-27 13:03:11 GMT+9
+ 저장 시간 : 2022-04-27 13:03:11 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩 - 반복자는 컨테이너가 제공하는 클래스가 되어야
+//  - sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<algorithm>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	// [도전] str을 sort로 정렬할 수 있게 한다.
+	
+	sort(str.begin(), str.end());
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1458
+2022-04-27 13:03:52 GMT+9
+ 저장 시간 : 2022-04-27 13:03:52 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩 - 반복자는 컨테이너가 제공하는 클래스가 되어야
+//  - sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<algorithm>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	// [도전] str을 sort로 정렬할 수 있게 한다.
+	
+	sort(str.begin(), str.end());
+
+	cout << str << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1486
+2022-04-27 13:04:37 GMT+9
+ 저장 시간 : 2022-04-27 13:04:37 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩 - 반복자는 컨테이너가 제공하는 클래스가 되어야
+//  - sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<algorithm>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "Hello" };
+	// [도전] str을 sort로 정렬할 수 있게 한다.
+	
+	sort(str.begin(), str.end());
+	
+	for(char c : str)
+		cout << c;
+	cout << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1524
+2022-04-27 13:05:30 GMT+9
+ 저장 시간 : 2022-04-27 13:05:30 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩 - 반복자는 컨테이너가 제공하는 클래스가 되어야
+//  - sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<algorithm>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "The quick brown fox jumps over the lazy dog" };
+	// [도전] str을 sort로 정렬할 수 있게 한다.
+	
+	sort(str.begin(), str.end());
+	
+	for(char c : str)
+		cout << c;
+	cout << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1558
+2022-04-27 13:06:19 GMT+9
+ 저장 시간 : 2022-04-27 13:06:19 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩 - 반복자는 컨테이너가 제공하는 클래스가 되어야
+//  - sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<algorithm>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	STRING str{ "The quick brown fox jumps over the lazy dog" };
+	// [도전] str을 sort로 정렬할 수 있게 한다.
+	
+	sort(str.begin(), str.end());
+	
+	unique(str.begin(), str.end());
+	for(char c : str)
+		cout << c;
+	cout << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1578
+2022-04-27 13:07:31 GMT+9
+ 저장 시간 : 2022-04-27 13:07:31 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩 - 반복자는 컨테이너가 제공하는 클래스가 되어야
+//  - sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<algorithm>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	string str{ "The quick brown fox jumps over the lazy dog" };
+	// [도전] str을 sort로 정렬할 수 있게 한다.
+	
+	sort(str.rbegin(), str.rend());
+	
+	unique(str.begin(), str.end());
+	for(char c : str)
+		cout << c;
+	cout << endl;
+
+	save("소스.cpp");
+}
+파일 정보 : 소스.cpp, 크기:1544
+2022-04-27 13:08:08 GMT+9
+ 저장 시간 : 2022-04-27 13:08:08 GMT+9
+
+//-----------------------------------------------------------------------------
+//2022.4.27  수 34                    월23수34                          (8주 2일)
+//
+//  자원을 관리하는 클래스 - STRING - 컨테이너 , 반복자, 알고리즘
+// 
+//	컨테이너 - 다른 객체를 저장하는 객체	
+// Sequence Container
+//				반복자 - Iteratiors are a generalization of pointers 
+//							- that allow a C++ program to work with different data structures 
+//							- in a uniform manner.
+// 반복자란 포인터를 추상화 한것 
+// 자료구조를 일관된 방식으로 접근하기 위해서.
+// 
+//	Associative Container
+// Unordered Associative Container
+// 
+//  C++ 20 concept 을 살펴보자./ (나머지 3개) module, range, coroutine
+// 
+// 오늘 코딩해서 알아볼 내용
+//  - 반복자 종류 판정
+//  - STRING의 반복자를 코딩 - 반복자는 컨테이너가 제공하는 클래스가 되어야
+//  - sort(str.begin(), str.end()); STRING이 sort가 되게 하자
+//		
+//-----------------------------------------------------------------------------
+
+#include<iostream>
+#include<algorithm>
+#include<string>
+#include"STRING.h"
+#include "save.h"
+
+using namespace std;
+
+//서로다른 자료형이 들어오니까 템플릿
+template <class Iter>
+void show(Iter)
+{
+	// [문제] Iter의 catergory로 출력하라.
+
+	cout << typeid(Iter::iterator_category).name() << endl;
+
+}
+
+int main()
+{
+	string str{ "The quick brown fox jumps over the lazy dog" };
+	// [도전] str을 sort로 정렬할 수 있게 한다.
+	
+	sort(str.rbegin(), str.rend());
+	
+	for(char c : str)
+		cout << c;
+	cout << endl;
+
 	save("소스.cpp");
 }
