@@ -1,21 +1,33 @@
 #include<iostream>
-#include<array>
-#include<algorithm>
-#include"STRING.h"
 
 using namespace std;
-extern bool Check;
+class Dog {
+	int a;
+public:
+	Dog(int num) : a{ num } {
+
+	}
+	int numget() {
+		return a;
+	}
+	friend ostream& operator<<(ostream& os, const Dog& s);
+};
+ostream& operator<<(ostream& os, const Dog& s) {
+	os << s.a;
+	return os;
+	 }
+
+void change(Dog& a, Dog& b) {
+	Dog temp = a;
+	a = b;
+	b = temp;
+}
+
 int main()
 {
-	Check = true;
-	array<STRING, 3> a{ "12345","333","12341523" };
+	Dog a{ 1 };
+	Dog b{ 2 };
+	change(a, b);
 
-	sort(a.begin(), a.end(), [](const STRING& a, const STRING& b) {
-		return a.getNum() < b.getNum();
-		});
-
-	for (int i = 0; i < a.size(); ++i)
-		cout << a[i] << endl;
-
-
+	cout << a << b << endl;
 }

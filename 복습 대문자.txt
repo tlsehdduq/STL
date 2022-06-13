@@ -1,0 +1,19 @@
+#INCLUDE<IOSTREAM>
+#INCLUDE<FSTREAM>
+
+USING NAMESPACE STD;
+
+INT MAIN() {
+	
+	IFSTREAM IN{ "복습.CPP" };
+	OFSTREAM OUT{ "복습 대문자.TXT" };
+	NOSKIPWS(IN);
+	CHAR C; 
+
+	WHILE (IN >> C) {
+		IF(ISLOWER(C))
+			C = TOUPPER(C);
+		OUT << C;
+	}
+
+}
